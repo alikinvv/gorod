@@ -752,6 +752,7 @@ input.form-control {
             & + .card__info {
                 padding: 20px 10px 12px 10px;
                 min-height: 130px;
+                height: calc(100% - 171px);
             }
         }
     }
