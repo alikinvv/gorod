@@ -36,9 +36,16 @@ function sameHeight(block) {
 }
 
 $(document).ready(function(){
+
+  if($('*').hasClass('video')) {
+    $('.video__play').click(function() {
+      $('.video__iframe').attr('src', $('.video__main').attr('data-src'));
+      $('.video__main').fadeOut().hide();
+      $(this).fadeOut().hide();
+    });
+  }
+
   initSwiper(); 
-
-
 
   $('.header__search').click(function() {
     $('.header').toggleClass('search');

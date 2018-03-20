@@ -111,6 +111,10 @@ input.form-control {
     &:hover, &:focus {outline: none;border: none;}
 }
 
+.bgBlue {
+    background: #252b33;
+}
+
 // helpers
 .mT16 {margin-top: 16px!important}
 .mT80 {margin-top: 80px}
@@ -1117,6 +1121,68 @@ input.form-control {
             position: relative;
             left: 38px;
         }
+        &.arrow-left {
+            position: relative;
+            right: -35px;
+            top: 2px;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 2px;
+                height: 8px;
+                background: #dcdcdc;
+            }
+            &:before {
+                transform: rotate(45deg);
+                top: 2px;
+                left: 8px;
+            }
+            &:after {
+                transform: rotate(-45deg);
+                top: 7px;
+                left: 8px;
+            }
+            a {
+                width: 20px;
+                height: 20px;
+                display: block;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        &.arrow-right {
+            position: relative;
+            left: -35px;
+            top: 2px;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 2px;
+                height: 8px;
+                background: #dcdcdc;
+            }
+            &:before {
+                transform: rotate(-45deg);
+                top: 2px;
+                left: 8px;
+            }
+            &:after {
+                transform: rotate(45deg);
+                top: 7px;
+                left: 8px;
+            }
+            a {
+                width: 20px;
+                height: 20px;
+                display: block;
+                position: relative;
+                z-index: 2;
+            }
+        }
         a {
             text-transform: uppercase;
             font-size: 14px;
@@ -1241,29 +1307,30 @@ input.form-control {
     }    
     .form-group {
         margin-bottom: 31px;
+    }    
+}
+
+.checkbox {
+    margin-top: 26px;
+    input {
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        box-shadow: none; 
+        margin-left: -29px;            
     }
-    .checkbox {
-        margin-top: 26px;
-        input {
-            width: 14px;
-            height: 14px;
+    label {
+        font-size: 15px;
+        font-weight: 100;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 94%;
+            bottom: 2px;
+            right: 0;
+            height: 2px;
             background: #fff;
-            box-shadow: none; 
-            margin-left: -29px;            
-        }
-        label {
-            font-size: 15px;
-            font-weight: 100;
-            position: relative;
-            &:after {
-                content: '';
-                position: absolute;
-                width: 94%;
-                bottom: 2px;
-                right: 0;
-                height: 2px;
-                background: #fff;
-            }
         }
     }
 }
@@ -1350,6 +1417,9 @@ input.form-control {
 
 .content {
     padding: 5px 0;
+    &-text {
+        padding-bottom: 56px;
+    }
     .col-xs-12 {
         max-width: 895px;
         margin: 0 auto;
@@ -1370,7 +1440,7 @@ input.form-control {
         li {
             font-size: 20px;
             font-weight: 100;
-            line-height: 30px; 
+            line-height: 1.3;
             position: relative;
             text-indent: 1.5em;
             margin-bottom: 17px;
@@ -1389,9 +1459,25 @@ input.form-control {
             }
         }
     }
+    ol {
+        margin-top: 20px;
+        padding-left: 0;
+        li {
+            font-size: 20px;
+            font-weight: 100;
+            line-height: 1.3;
+            position: relative;
+            text-indent: 1.5em;
+            margin-bottom: 17px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
     img {
         margin-top: 53px;
         margin-bottom: 64px;
+        max-width: 100%;
     }
     h2 {
         margin-bottom: 58px;
@@ -1411,6 +1497,135 @@ input.form-control {
             margin: 0;
             pointer-events: none;
        }
+    }
+}
+
+input[type="file"] {
+    width: 45px;
+    height: 45px!important;
+    opacity: 0;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    & + .upload {
+        width: 45px;
+        height: 45px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: #252b33;            
+        }
+        &:before {
+            transform: translate(-50%, -50%);
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+        & + .upload-label {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 69px;
+            font-weight: 100;
+            font-size: 18px;
+        }
+    }
+}
+
+.form {
+    padding: 65px 0;
+    h2 {
+        margin-bottom: 65px;
+    }
+    .form-group {
+        margin-bottom: 31px;
+        position: relative;
+    }
+    form {
+        max-width: 420px;
+        margin: 0 auto;
+        input {
+            height: 50px;
+        }
+        p {
+            color: #fff;
+            font-weight: 100;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .btn {
+            width: 100%;
+            margin-top: 17px;
+            height: 55px;
+            font-size: 22px;
+            font-weight: normal;
+        }
+        .checkbox {
+            font-size: 15px;
+            font-weight: 100;
+            color: #fff;
+            position: relative;
+            label {
+                padding-left: 35px;
+            }
+            input {
+                top: -15px;
+                left: 0;
+                margin: 0;
+            }
+        }
+        .checkbox label:after {
+            height: 1px;
+            bottom: 3px;
+            width: 91%;
+        }
+    }
+}
+
+.video {
+    width: 100%;
+    height: 524px;
+    background: #f3f3f3;
+    position: relative;
+    &__main {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__play {
+        position: absolute;
+        width: 59px;
+        height: 59px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../img/icons/play.png) no-repeat center;
+        background-size: contain;
+        z-index: 2;
+        cursor: pointer;
+        transition: all .6s;
+        &:hover,&:focus {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+    &__iframe {
+        width: 100%;
+        height: 100%;
     }
 }
 
