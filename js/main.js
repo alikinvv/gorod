@@ -38,11 +38,27 @@ function sameHeight(block) {
 $(document).ready(function(){
 
   if($('*').hasClass('video')) {
-    $('.video__play').click(function() {
-      $('.video__iframe').attr('src', $('.video__main').attr('data-src'));
-      $('.video__main').fadeOut().hide();
+    $('.video__main .video__play').click(function() {
+      $(".video iframe").remove();
+
+      $('<iframe class="video__iframe" frameborder="0" allowfullscreen></iframe>')
+    .attr("src", $('.video__other .video__second:first-child').attr('data-src'))
+    .appendTo(".video");
+
+      $(this).parent().fadeOut().hide();
       $(this).fadeOut().hide();
     });
+
+    $('.video__second .video__play').click(function() {
+      $(".video iframe").remove();
+
+      $('<iframe class="video__iframe" frameborder="0" allowfullscreen></iframe>')
+    .attr("src", $(this).parent().attr('data-src'))
+    .appendTo(".video");
+
+      $(this).parent().toggleClass('show');
+    });
+
   }
 
   initSwiper(); 

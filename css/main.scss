@@ -1597,6 +1597,12 @@ input[type="file"] {
     height: 524px;
     background: #f3f3f3;
     position: relative;
+    overflow: hidden;
+    &:hover {
+        .video__other {
+            transform: translateY(0);
+        }
+    }
     &__main {
         width: 100%;
         height: 100%;
@@ -1626,6 +1632,32 @@ input[type="file"] {
     &__iframe {
         width: 100%;
         height: 100%;
+    }
+    &__other {
+        height: 179px;
+        background: rgba(0,0,0,0.6);
+        position: absolute;
+        width: 100%;
+        bottom: -30px;
+        left: 0;
+        transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.8s;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px 30px;
+        transform: translateY(100%);
+    }
+    &__second {
+        width: 25%;
+        height: 106px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0 25px;
+        .video__play {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
 
