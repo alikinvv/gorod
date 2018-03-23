@@ -22,6 +22,22 @@
 
 // for 768
 @media (max-width: 1023px) {
+	.header {
+		.socialBlock {
+			display: none;
+		}
+		&__logo {
+			width: auto;
+			a {
+				width: 101px;
+				text-decoration: none;
+			    background-image: url(../img/logo-text.svg);
+			}
+		}
+		&__search {
+			display: none;
+		}
+	}
 	.mbanner {
 		height: auto;
 		&__left {
@@ -96,20 +112,22 @@
 			}
 		}		
 	}
-	.mbannerItem__date, 
-	.mbannerItem__title {
-	    opacity: 1;
-	    transform: translateY(0);
-	}
-	.mbannerItem__info {
-		width: 100%!important;
-		height: 100%!important;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 100;
-	}
+	.mbannerItem {
+		&__date, &__title {
+		    opacity: 1;
+		    transform: translateY(0);
+		}
+		&__info {
+			width: 100%!important;
+			height: 100%!important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 100;
+		}
+	}	
 	.h2, h2 {font-size: 25px;}
+	.h1, h1 {font-size: 45px;}
 	.centerText {
         padding: 40px 0 22px;
         p {font-size: 16px;}
@@ -171,16 +189,7 @@
 	    padding-bottom: 53px;
 	    h2 {margin-bottom: 40px;}
 	    .swiper-pagination {bottom: -20px;}
-	}
-	.card {
-		&__img {height: 155px;}
-		&__date {font-size: 14px;}
-		&__info {padding: 17px 10px 6px 10px;}
-		&__title {
-			font-size: 15px;
-			span {font-size: 15px;}
-		}
-	}
+	}	
 	.banner {
         padding: 35px 0 69px;
         background-position: 58% 94%;
@@ -261,6 +270,7 @@
 		    top: 43px;
 		    img {width: 24px;}
 		}
+		&__links, &__subscribe {display: none;}
 		&__addr {
 			margin-top: 24px;
 		    line-height: 27px;
@@ -285,28 +295,47 @@
 			}
 		}
 	}
-	.footer__links, .footer__subscribe {display: none;}
-	.header__logo a {
-	    text-decoration: none;
-	    background-image: url(../img/logo-text.svg);
-	}	
+	.heroBanner {
+	    height: 500px;
+		&__subtitle {
+			font-size: 18px;
+		    line-height: 1.5;
+		}
+		h1 {
+			margin-bottom: 10px;
+		}
+	}
+	.cardsWrap {
+	    padding: 56px 0 10px;
+	    h2 {
+    	    margin-bottom: 46px;
+	    }
+	}
+	.card {
+		&__info {
+		    min-height: 120px;
+		    padding: 17px 10px 0 10px;
+		}
+		&__imgWrap {height: 160px;}
+		&__date {
+		    font-size: 13.4px;
+	        margin-bottom: 8px;
+		}
+		&__title {
+			font-size: 16.08px;
+			span {font-size: 14.74px;}
+		}
+	}
 }
 
 // for 414
 @media (max-width: 767px) {
-	.header__search {
-		display: none;
-	}
-	.header {
-		.socialBlock {
-			display: none;
+	.h1, h1 {font-size: 34px;}
+	.heroBanner {
+	    height: 480px;
+		h1 {
+			margin-bottom: 10px;
 		}
-		&__logo {
-			width: auto;
-		}
-	}
-	.header__logo a {
-		width: 101px;
 	}
 	.mbanner {
 		&__left {
@@ -431,7 +460,7 @@
 	}
 	.h2, h2 {
 		font-size: 30px;
-	    line-height: 42px;
+        line-height: 1.1;
 	}
 	.doing {
 		padding: 0;
@@ -470,17 +499,24 @@
 	    .swiper-pagination {bottom: -26px;}
 	}
 	.card {
-		&__img {
+		&__imgWrap {
 			height: 200px;
 		}
 		&__date {
 			font-size: 18px;
+			margin-bottom: 12px;
 		}
 		&__title {
 			font-size: 20px;
 			span {font-size: 18px;}
 		}
-		&__info {padding: 25px 10px 11px 10px;}
+		&__info {padding: 19px 10px 7px 10px;}
+	}
+	.cardsWrap {
+	    padding: 29px 0 0px;
+	    h2 {
+		    margin-bottom: 30px;
+		}
 	}
 	.banner {
 	    padding: 27px 0 46px;

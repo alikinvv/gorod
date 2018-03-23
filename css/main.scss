@@ -111,9 +111,7 @@ input.form-control {
     &:hover, &:focus {outline: none;border: none;}
 }
 
-.bgBlue {
-    background: #252b33;
-}
+.bgBlue {background: #252b33;}
 
 // helpers
 .mT16 {margin-top: 16px!important}
@@ -254,9 +252,7 @@ input.form-control {
         background: #fff!important;
         box-shadow: 0 14px 20px 0px rgba(0,0,0,0.04);
         opacity: 0;
-        &:hover {
-         opacity: 1; 
-        }
+        &:hover {opacity: 1;}
         .header__menu li a {
             color: $mainText;
             font-weight: bold;
@@ -268,12 +264,8 @@ input.form-control {
                 background-image: url(../img/logo-color-text.svg);
             }
         }
-        .header__search {
-            background-image: url(../img/icons/search-gray.svg);
-        }
-        .header__searchForm .form-group input {
-            border-color: #e9e9e9;
-        }
+        .header__search {background-image: url(../img/icons/search-gray.svg);}
+        .header__searchForm .form-group input {border-color: #e9e9e9;}
         .socialBlock__item-fb {background-image: url(../img/icons/fb-gray.svg);}
         .socialBlock__item-vk {background-image: url(../img/icons/vk-gray.svg);}
         .socialBlock__item-inst {background-image: url(../img/icons/instagram-gray.svg);}
@@ -364,9 +356,7 @@ input.form-control {
         background-position: center;
         background-size: cover;
         transition: all .4s;
-        &:hover, &:focus {
-            opacity: 0.6;
-        }
+        &:hover, &:focus {opacity: 0.6;}
     }
     &__searchForm {
         margin-top: 18px;
@@ -624,9 +614,7 @@ input.form-control {
         #mask3 path {transform: scale(0.59) translate(-13%, 2%)}
         #mask4 path {transform: scale(0.59) translate(-27%, 2%)}
         &:hover, &:focus {
-            .swiperNumber__img {
-                background-size: 350%; 
-            }
+            .swiperNumber__img {background-size: 350%;}
         }
     }
     &__info {
@@ -661,9 +649,7 @@ input.form-control {
         display: inline-block;
         margin-bottom: 22px;
     }
-    &__text {
-        font-size: 24px;
-    }
+    &__text {font-size: 24px;}
 
 }
 
@@ -731,7 +717,7 @@ input.form-control {
     &:hover, &:focus {
         color: $mainText;
         text-decoration: none;
-        .card__img {background-size: 130%;}
+        .card__img {transform: scale(1.2)}
     }
     &__info {
         border-left: 1px solid #eeeeee;
@@ -743,14 +729,11 @@ input.form-control {
         padding: 25px 10px 12px 10px;
         min-height: 190px;
     }
-    &__img {
+    &__imgWrap {
         height: 230px;
-        background-size: 120%;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
+        overflow: hidden;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        transition: all ease-out .6s;
         &-photo {
             height: 170px;
             & + .card__info {
@@ -759,6 +742,13 @@ input.form-control {
                 height: calc(100% - 171px);
             }
         }
+    }
+    &__img {
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;        
+        transition: all ease-in-out 2s;
     }
     &__date {
         font-size: 20px;
@@ -800,7 +790,7 @@ input.form-control {
             justify-content: center;
             min-height: auto;
         }
-        .card__img {height: 130px;}
+        .card__imgWrap {height: 130px;}
         .card__title {
             font-size: 18px;
             font-weight: 700;
@@ -923,7 +913,7 @@ input.form-control {
     .card {margin-bottom: 30px;}
     &-3 .card {
         @include make-xs-column(12);
-        @include make-sm-column(6);
+        @include make-sm-column(4);
         @include make-md-column(4);
         @include make-lg-column(4); 
         margin-bottom: 50px;
@@ -1107,9 +1097,7 @@ input.form-control {
     padding: 35px 0;
     max-width: 895px;
     margin: 0 auto;
-    & + .cardsWrap {
-        padding: 25px 0 89px;
-    }
+    & + .cardsWrap {padding: 25px 0 89px;}
     li {
         float: left;
         margin: 0 28px;
@@ -1125,6 +1113,11 @@ input.form-control {
             position: relative;
             right: -35px;
             top: 2px;
+            &:hover, &:focus {
+                &:before, &:after {
+                    background: #333;
+                }
+            }
             &:before, &:after {
                 content: '';
                 position: absolute;
@@ -1133,6 +1126,7 @@ input.form-control {
                 width: 2px;
                 height: 8px;
                 background: #dcdcdc;
+                transition: all ease-in-out .4s;
             }
             &:before {
                 transform: rotate(45deg);
@@ -1156,6 +1150,11 @@ input.form-control {
             position: relative;
             left: -35px;
             top: 2px;
+            &:hover, &:focus {
+                &:before, &:after {
+                    background: #333;
+                }
+            }
             &:before, &:after {
                 content: '';
                 position: absolute;
@@ -1164,6 +1163,7 @@ input.form-control {
                 width: 2px;
                 height: 8px;
                 background: #dcdcdc;
+                transition: all ease-in-out .4s;
             }
             &:before {
                 transform: rotate(-45deg);
@@ -1192,9 +1192,7 @@ input.form-control {
             &:hover, &:focus {
                 text-decoration: none;
             }
-            &.active {
-                opacity: 1;
-            }
+            &.active {opacity: 1;}
         }
     }
 }
@@ -1220,9 +1218,7 @@ input.form-control {
         opacity: 1;
     }
     &.success {
-        .subscribe {
-            opacity: 0;
-        }
+        .subscribe {opacity: 0;}
         .success {
             opacity: 1;
             z-index: 1;
@@ -1265,9 +1261,7 @@ input.form-control {
     top: -48px;
     cursor: pointer;
     transition: all .4s;
-    &:hover, &:focus {
-        opacity: 0.6;
-    }
+    &:hover, &:focus {opacity: 0.6;}
 
     &:before, &:after {
         content: '';
@@ -1280,12 +1274,8 @@ input.form-control {
         transform: translate(-50%, -50%);
         transition: all .4s;
     }
-    &:before {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    &:after {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    &:before {transform: translate(-50%, -50%) rotate(45deg);}
+    &:after {transform: translate(-50%, -50%) rotate(-45deg);}
 }
 
 .subForm {
@@ -1305,9 +1295,7 @@ input.form-control {
             font-size: 22px;
         }
     }    
-    .form-group {
-        margin-bottom: 31px;
-    }    
+    .form-group {margin-bottom: 31px;}    
 }
 
 .checkbox {
@@ -1415,11 +1403,11 @@ input.form-control {
     }
 }
 
+section + section.content-text {padding-top: 44px;}
+
 .content {
     padding: 5px 0;
-    &-text {
-        padding-bottom: 56px;
-    }
+    &-text {padding-bottom: 73px;}
     .col-xs-12 {
         max-width: 895px;
         margin: 0 auto;
@@ -1427,6 +1415,11 @@ input.form-control {
         left: 50%;
         transform: translateX(-50%);
         h2:first-child {margin-top: 20px;}
+    }
+    &-full {
+        .col-xs-12 {
+            max-width: 100%;
+        }
     }
     p {
         font-size: 20px;
@@ -1444,9 +1437,7 @@ input.form-control {
             position: relative;
             text-indent: 1.5em;
             margin-bottom: 17px;
-            &:last-child {
-                margin-bottom: 0;
-            }
+            &:last-child {margin-bottom: 0;}
             &:before {
                 content: '';
                 position: absolute;
@@ -1469,9 +1460,7 @@ input.form-control {
             position: relative;
             text-indent: 1.5em;
             margin-bottom: 17px;
-            &:last-child {
-                margin-bottom: 0;
-            }
+            &:last-child {margin-bottom: 0;}
         }
     }
     img {
@@ -1524,12 +1513,8 @@ input[type="file"] {
             height: 20px;
             background: #252b33;            
         }
-        &:before {
-            transform: translate(-50%, -50%);
-        }
-        &:after {
-            transform: translate(-50%, -50%) rotate(90deg);
-        }
+        &:before {transform: translate(-50%, -50%);}
+        &:after {transform: translate(-50%, -50%) rotate(90deg);}
         & + .upload-label {
             color: #fff;
             position: absolute;
@@ -1544,9 +1529,7 @@ input[type="file"] {
 
 .form {
     padding: 65px 0;
-    h2 {
-        margin-bottom: 65px;
-    }
+    h2 {margin-bottom: 65px;}
     .form-group {
         margin-bottom: 31px;
         position: relative;
@@ -1554,9 +1537,7 @@ input[type="file"] {
     form {
         max-width: 420px;
         margin: 0 auto;
-        input {
-            height: 50px;
-        }
+        input {height: 50px;}
         p {
             color: #fff;
             font-weight: 100;
@@ -1575,9 +1556,7 @@ input[type="file"] {
             font-weight: 100;
             color: #fff;
             position: relative;
-            label {
-                padding-left: 35px;
-            }
+            label {padding-left: 35px;}
             input {
                 top: -15px;
                 left: 0;
@@ -1599,9 +1578,7 @@ input[type="file"] {
     position: relative;
     overflow: hidden;
     &:hover {
-        .video__other {
-            transform: translateY(0);
-        }
+        .video__other {transform: translateY(0);}
     }
     &__main {
         width: 100%;

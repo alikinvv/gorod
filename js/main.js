@@ -37,6 +37,17 @@ function sameHeight(block) {
 
 $(document).ready(function(){
 
+  $('#videoUploadFile').change(function() {
+    if(document.getElementById("videoUploadFile").files.length == 0 ){
+      $(this).siblings('.upload-label').text('Прикрепить резюме');
+    } else {
+      $(this).siblings('.upload-label').text('Файл прикреплен');
+    }
+  });
+
+ 
+
+  // video player
   if($('*').hasClass('video')) {
     $('.video__main .video__play').click(function() {
       $(".video iframe").remove();
@@ -144,7 +155,7 @@ $(document).ready(function(){
     $(this).parent().parent().removeClass('sh');
   });
 
-  if($(window).width() <= 767) {
+  if($(window).width() <= 1023) {
     $('.header .row').append('<div class="hamburger"><span></span><span></span><span></span></div>');
     $('.header__menu').addClass('mobile');
   }
@@ -154,7 +165,8 @@ $(document).ready(function(){
       $('.header__menu').toggleClass('showMenu');
     });
 
-    if($('*').hasClass('mapWrap')) {
+    // contact map
+  if($('*').hasClass('mapWrap')) {
 
     var uluru = {lat: 58.007606, lng: 56.249746};
     var map = new google.maps.Map(document.getElementById('fullMap'), {
@@ -180,10 +192,10 @@ $( window ).load(function() {
 
 $(document).on('scroll',function() {
 
-  if($(window).scrollTop() >= 15) {
-    $('.header').addClass('fixed').removeClass('search');
-  } else if ($(window).scrollTop() <= 14) {
-    $('.header').removeClass('fixed').css('background','transparent');
+  if($(window).scrollTop() >= 15 && $(window).width() >= 1024) {
+    $('.header:not(.header-red)').addClass('fixed').removeClass('search');
+  } else if ($(window).scrollTop() <= 14 && $(window).width() >= 1024) {
+    $('.header:not(.header-red)').removeClass('fixed').css('background','transparent');
   }
 
 });
