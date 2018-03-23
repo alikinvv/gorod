@@ -22,6 +22,12 @@
 
 // for 768
 @media (max-width: 1023px) {
+	.subMenu {
+		 padding: 44px 0 20px;
+		li a {			   
+			font-size: 12px;
+		}
+	}
 	.header {
 		.socialBlock {
 			display: none;
@@ -245,29 +251,40 @@
 	    bottom: 10px;
 	    height: 1px;
 	}
+	.swiperMobile {
+		.card-news {
+			display: none;
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3) {
+				display: block;
+			}
+		}
+	}
+	.subMenu+.cardsWrap {
+	    padding: 25px 0 31px;
+	}
 	.card-news {
-		display: none;
-		.card__img {height: 118px;}
-		&:nth-child(1),
-		&:nth-child(2),
-		&:nth-child(3) {
-			display: block;
+		margin-bottom: 18px!important;
+		.card__imgWrap {
+		    height: 119px;
 		}
 		.card__title {
 			font-size: 15px;
-		    margin-bottom: 8px;
+		    margin-bottom: 12px;
+	        line-height: 1.3;
 		}
 		.card__date {font-size: 9px;}
-		.card__info {padding: 24px 10px 8px 10px;}
+		.card__info {padding: 18px 10px 14px 10px;}
 	}
 	.footer {
-        padding: 50px 0 8px;
+        padding: 40px 0 10px;
 	    position: relative;
 	    &__logoWrap {width: 143px;}
 	    .socialBlock {
 		    position: absolute;
 		    right: 0;
-		    top: 43px;
+		    top: 33px;
 		    img {width: 24px;}
 		}
 		&__links, &__subscribe {display: none;}
@@ -330,6 +347,12 @@
 
 // for 414
 @media (max-width: 767px) {
+	.subMenu {
+	    padding: 34px 0 10px;
+	    li a {
+			font-size: 11px;
+		}
+	}
 	.h1, h1 {font-size: 34px;}
 	.heroBanner {
 	    height: 480px;
@@ -571,7 +594,8 @@
 	    margin-bottom: 13px;
 	}
 	.card-news {
-		.card__img {
+		margin-bottom: 19px!important;
+		.card__imgWrap {
 			height: 160px;
 		}
 		.card__title {
@@ -583,7 +607,8 @@
 			font-size: 14px;
 		}
 		.card__info {
-	        padding: 22px 10px 12px 10px;
+	        padding: 24px 10px 12px 10px;
+            height: auto;
 		}
 	}
 	.features:before {
