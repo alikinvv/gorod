@@ -22,10 +22,46 @@
 
 // for 768
 @media (max-width: 1023px) {
+	.content .col-xs-12 h2:first-child {
+		margin-bottom: 39px;
+	}
+	.content ul li:before {
+		width: 2px;
+		height: 2px;
+	}
+	.share {
+	    margin: 53px 0;
+	}
+	.content {
+		 p, ul li, ol li {
+			font-size: 16px;
+		    line-height: 1.8;
+		}
+		ul li {
+			margin-bottom: 1px;
+		}
+		ul {
+			margin-top: 12px;
+		}
+		h2 {
+		    margin-bottom: 37px;
+		    margin-top: 49px;
+		}
+		img {
+		    margin-top: 31px;
+   			 margin-bottom: 48px;
+		}
+	}
 	.subMenu {
 		 padding: 44px 0 20px;
 		li a {			   
 			font-size: 12px;
+		}
+		li.prev {
+			right: 15px;
+		}
+		li.next {
+			left: 15px;
 		}
 	}
 	.header {
@@ -321,6 +357,9 @@
 		h1 {
 			margin-bottom: 10px;
 		}
+		.share {
+			display: none;
+		}
 	}
 	.cardsWrap {
 	    padding: 56px 0 10px;
@@ -343,15 +382,40 @@
 			span {font-size: 14.74px;}
 		}
 	}
+
 }
 
 // for 414
 @media (max-width: 767px) {
+	.card__imgWrap-photo+.card__info {
+		height: initial;
+	}
 	.subMenu {
 	    padding: 34px 0 10px;
-	    li a {
-			font-size: 11px;
+		li {
+		    margin: 0 16px;
+		    a {
+				font-size: 11px;
+			}
+			&.arrow-left {
+				right: 4px;
+			}
+			&.arrow-right {
+				left: -17px;
+			}
 		}
+	}
+	.subMenu li.arrow-left:after, .subMenu li.arrow-left:before {
+		height: 10px;
+	}
+	.subMenu li.arrow-left:before {
+		top: 1px;
+	}
+	.subMenu li.arrow-right:after, .subMenu li.arrow-right:before {
+		height: 10px;
+	}
+	.subMenu li.arrow-right:before {
+		top: 1px;
 	}
 	.h1, h1 {font-size: 34px;}
 	.heroBanner {
@@ -445,6 +509,24 @@
         	padding-bottom: 15px;
         }
 	}
+	.content h2 {
+		margin-bottom: 29px;
+		margin-top: 43px;
+	}
+	.content ol li, .content p, .content ul li {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	.content ul li {
+		margin-bottom: 14px;
+	}	
+	.share {
+	    margin: 40px 0;
+	}
+	.content img {
+	    margin-top: 30px;
+    	margin-bottom: 45px;
+	}
 	.swiperNumber {
 		&__number {
 		    height: 190px;
@@ -482,7 +564,7 @@
 	    bottom: -12px;
 	}
 	.h2, h2 {
-		font-size: 30px;
+		font-size: 28px;
         line-height: 1.1;
 	}
 	.doing {
@@ -618,33 +700,32 @@
 		display: none;
 	}
 	.footer {
-		padding: 50px 0 48px;
-	}
-	.footer__logoWrap {
-		width: 168px;
-	}
-	.footer .socialBlock img {
-		width: 30px;
-	}
-	.footer .socialBlock {
-		top: 124px;
-		right: initial;
-		left: 0;
-		text-align: left;
-	}
-	.footer__logoWrap {
-		margin-bottom: 78px;
-	}
-	.footer__addr span {
-		position: static;
-		font-size: 12px;
-	}
-	.footer__addr a {
-		font-size: 16px;
-	}
-	.footer__addr {
-		line-height: 31px;
-		font-size: 16px;
+	    padding: 41px 0 48px;
+	    &__logoWrap {
+			width: 168px;
+			margin-bottom: 78px;
+		}
+		.socialBlock {
+			top: 114px;
+			right: initial;
+			left: 0;
+			text-align: left;
+			img {
+				width: 30px;
+			}
+		}
+		&__addr {
+			line-height: 31px;
+			font-size: 16px;
+			margin-top: 20px;
+			span {
+				position: static;
+				font-size: 12px;
+			}
+			a {
+				font-size: 16px;
+			}
+		}
 	}
 }
 

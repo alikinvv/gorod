@@ -37,14 +37,17 @@ function sameHeight(block) {
 
 $(document).ready(function(){
 
-  $('#videoUploadFile').change(function() {
-    if(document.getElementById("videoUploadFile").files.length == 0 ){
-      $(this).siblings('.upload-label').text('Прикрепить резюме');
-    } else {
-      $(this).siblings('.upload-label').text('Файл прикреплен');
-    }
-  });
-
+  
+  // upload form check file
+  if($('*').hasClass('video')) {
+    $('#videoUploadFile').change(function() {
+      if(document.getElementById("videoUploadFile").files.length == 0 ){
+        $(this).siblings('.upload-label').text('Прикрепить резюме');
+      } else {
+        $(this).siblings('.upload-label').text('Файл прикреплен');
+      }
+    });
+  }
  
 
   // video player
@@ -184,6 +187,12 @@ $(document).ready(function(){
 
   };
 
+  // change submenu text to arrows
+  if($(window).width() <= 767 && $('*').hasClass('subMenu')) {
+    $('.subMenu li.prev').addClass('arrow-left').removeClass('prev').text('');
+    $('.subMenu li.next').addClass('arrow-right').removeClass('next').text('');
+  }
+
 });
 
 $( window ).load(function() {
@@ -203,9 +212,16 @@ $(document).on('scroll',function() {
 //Swiper plugin initialization on window resize
 $(window).on('resize', function(){
     initSwiper();   
+
     if($(window).width() >= 768) {
       sameHeight('.news-main .card__info');
     } else {
       $('.news-main .card__info').css('height','auto');
-    }     
+    }
+
+    // change submenu text to arrows
+    if($(window).width() <= 767 && $('*').hasClass('subMenu')) {
+      $('.subMenu li.prev').addClass('arrow-left').removeClass('prev').text('');
+      $('.subMenu li.next').addClass('arrow-right').removeClass('next').text('');
+    }
 });
