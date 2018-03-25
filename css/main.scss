@@ -258,10 +258,16 @@ input.form-control {
             font-weight: bold;
         }
         .header__logo a {
-            background-image: url(../img/logo-color.svg);
+            img {
+                opacity: 0;
+                &.color:not(.hover) {
+                    opacity: 1;
+                }
+            }
             &:hover, &:focus {
-                text-decoration: none;
-                background-image: url(../img/logo-color-text.svg);
+                img.color.hover {
+                    opacity: 1;
+                }
             }
         }
         .header__search {background-image: url(../img/icons/search-gray.svg);}
@@ -291,11 +297,14 @@ input.form-control {
                 &.hover {
                     opacity: 0;
                 }
+                &.color {
+                    opacity: 0;
+                }
             }
             &:hover, &:focus {
                 img {
                     opacity: 0;
-                    &.hover {
+                    &.hover:not(.color) {
                         opacity: 1;
                     }
                 }
@@ -1203,9 +1212,9 @@ input.form-control {
             opacity: 0.5;
             &:hover, &:focus {
                 text-decoration: none;
-            }
-            &.active {opacity: 1;}
+            }            
         }
+        &.active a {opacity: 1;}
     }
 }
 
