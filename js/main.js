@@ -144,14 +144,14 @@ $(document).ready(function(){
   initSwiper();
   
   // open modal
-  $('a[data-modal]').click(function(e) {
+  $('.btn[data-modal]').click(function(e) {
     e.preventDefault();
     $('.modal[data-modal="'+ $(this).attr('data-modal') +'"]').addClass('sh');
   });
 
-  $('.footer__subscribe .btn').click(function(e) {
+  $('.btn.success[data-modal]').click(function(e) {
     e.preventDefault();
-    $('.modal[data-modal="sub"]').addClass('sh success');
+    $('.modal[data-modal="'+ $(this).attr('data-modal') +'"]').addClass('sh success');
   });  
 
   // close modal
