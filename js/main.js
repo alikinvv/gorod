@@ -71,6 +71,7 @@ $(document).ready(function(){
     .appendTo(".video");
 
       $(this).parent().toggleClass('show');
+      $('.video__main').fadeOut();
     });
 
   }
