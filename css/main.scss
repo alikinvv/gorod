@@ -279,14 +279,26 @@ input.form-control {
             display: inline-block;
             width: 110px;
             height: 37px;
-            background-image: url(../img/logo-menu.svg);
-            background-repeat: no-repeat;
-            background-position: 5% 50%;
-            background-size: 100%;
             transition: all .6s;
+            position: relative;
+            img {
+                width: 100%;
+                opacity: 1;
+                position: absolute;
+                transition: all .6s;
+                top: 0;
+                left: 0;
+                &.hover {
+                    opacity: 0;
+                }
+            }
             &:hover, &:focus {
-                text-decoration: none;
-                background-image: url(../img/logo-text.svg);
+                img {
+                    opacity: 0;
+                    &.hover {
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
