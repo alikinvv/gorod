@@ -74,14 +74,22 @@
 		}
 	}
 	.header {
+	    padding: 28px 24px 14px;
 		.socialBlock {
 			display: none;
 		}
 		&__logo {
 			width: auto;
 			a {
-				width: 101px;
+				width: 112px;
 				text-decoration: none;
+				img {
+					display: none;
+				}
+				img[src*="logo-text.svg"] {
+					display: block;
+					opacity: 1;
+				}
 			}
 		}
 		&__search {
