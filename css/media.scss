@@ -22,6 +22,12 @@
 
 // for 768
 @media (max-width: 1023px) {
+	section+section.content-text {
+		padding-bottom: 43px;
+	}
+	section.content-text {
+		padding-bottom: 43px;
+	}
 	.hamburger {
 		margin: 7px 14px;
 		&.active {
@@ -39,8 +45,10 @@
 		margin-bottom: 39px;
 	}
 	.content ul li:before {
-		width: 2px;
-		height: 2px;
+		width: 4px;
+		height: 4px;
+		left: 2px;
+    	top: 12px;
 	}
 	.content ol {
 		padding-left: 15px;
@@ -49,16 +57,7 @@
 	    margin: 53px 0;
 	}
 	.content {
-		 p, ul li, ol li {
-			font-size: 16px;
-		    line-height: 1.8;
-		}
-		ul li {
-			margin-bottom: 1px;
-		}
-		ul {
-			margin-top: 12px;
-		}
+		padding: 5px 23px;
 		h2 {
 		    margin-bottom: 37px;
 		    margin-top: 49px;
@@ -67,6 +66,14 @@
 		    margin-top: 31px;
    			 margin-bottom: 48px;
 		}
+		 p, ul li, ol li {
+			font-size: 16px;
+			line-height: 2.3;
+		}
+		ul li {margin-bottom: 1px;}
+		ul {margin-top: 12px;}
+		p {line-height: 1.8;}
+		ol li {margin-bottom: 2px;}				
 	}
 	.subMenu {
 		 padding: 44px 0 20px;
@@ -401,14 +408,18 @@
 		}
 	}
 	.cardsWrap {
-	    padding: 56px 0 10px;
+		padding: 56px 0 10px;
+		&-pd {
+			padding: 56px 20px 10px;
+		}
 	    h2 {
     	    margin-bottom: 46px;
 	    }
 	}
 	.card__imgWrap-photo+.card__info {
-		padding: 29px 10px 10px 10px;
+		padding: 18px 10px 10px 10px;
 		min-height: 112px;
+		height: calc(100% - 120px);
 	}
 	.card {
 		&__name {line-height: 1.1;}
