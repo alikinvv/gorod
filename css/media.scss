@@ -451,6 +451,78 @@
 
 // for 414
 @media (max-width: 767px) {
+	.checkbox {
+		margin-top: 14px;
+		input {
+			width: 10px;
+			height: 10px;
+		}
+		label {
+			font-size: 11.02px;
+		}
+	}
+	.checkbox label:after {
+		bottom: 6px;
+		height: 1px;
+		width: 92%;
+	}
+	.subForm form .btn {
+		height: 40px;
+		font-size: 15.78px;
+	}
+	.subForm .form-group {
+		margin-bottom: 22px;
+	}
+	.subForm form button, .subForm form input.form-control {
+		height: 37px;
+		font-size: 12.91px;
+		&::placeholder {font-size: 12.91px;}
+		&::-webkit-input-placeholder {font-size: 12.91px;}
+		&::-moz-placeholder {font-size: 12.91px;}
+		&:-ms-input-placeholder {font-size: 12.91px;}
+		&:-moz-placeholder {font-size: 12.91px;}
+	}
+	.closeForm {
+		right: 15px;
+		top: -33px;
+	}
+	.closeForm:after, .closeForm:before {
+		height: 26px;
+		width: 2px;
+		border-radius: 50px;
+	}
+	.subFormWrap {
+		background: #282828;
+		overflow: scroll;
+		p {
+			font-size: 18px;
+			font-weight: 100;
+			white-space: normal;
+			line-height: 1.7;
+			margin-bottom: 24px;
+		}
+		form {
+			width: 81%;
+		}
+	}
+	.subFormWrap h2 {
+		padding: 0 75px;
+		margin-top: 0;
+		margin-bottom: 13px;
+		line-height: 1.5;
+		white-space: normal;
+	}
+	.subForm {
+		width: 95%;
+		margin-top: 0;
+	}
+	.programs .col-xs-12 {
+		padding: 0;
+	}
+	.swiperNumber__img.mask1 {
+		top: -12px;
+   		 left: 26px;
+	}
 	.header__menu.mobile li a {
 		font-size: 18px;
 	}
@@ -500,10 +572,10 @@
 				font-size: 11px;
 			}
 			&.arrow-left {
-				right: 4px;
+				right: 41px;
 			}
 			&.arrow-right {
-				left: -17px;
+				left: -41px;
 			}
 		}
 		&-trener {
@@ -515,11 +587,29 @@
 			}
 		}
 	}
+	.content {
+		padding: 5px 0;
+	}
+	.content ul li {
+		text-indent: 1.3em;
+		br {
+			display: none;
+		}
+	}
+	.content ul li:before {
+		left: 0;
+		top: 10px;
+		width: 5px;
+		height: 5px;
+	}
 	.subMenu li.arrow-left:after, .subMenu li.arrow-left:before {
 		height: 10px;
 	}
 	.subMenu li.arrow-left:before {
 		top: 1px;
+	}
+	.content .col-xs-12 h2:first-child {
+		margin-bottom: 29px;
 	}
 	.subMenu li.arrow-right:after, .subMenu li.arrow-right:before {
 		height: 10px;
@@ -633,11 +723,17 @@
 			line-height: 1.4;
 		}
 		ul li, ul li {
-			margin-bottom: 14px;
+			margin-bottom: 7px;
 		}	
 		img {
 		    margin-top: 30px;
 	    	margin-bottom: 45px;
+		}
+	}
+	.content ol li {
+		text-indent: 0.5em;
+		br {
+			display: none;
 		}
 	}
 	.share {
@@ -715,7 +811,7 @@
 		margin-top: 15px;
     	padding-bottom: 41px;
 		h2 {
-	    	margin-bottom: 17px;
+	    	margin-bottom: 32px;
 		}		
 	    .swiper-pagination {bottom: -26px;}
 	}
@@ -780,10 +876,6 @@
 	.news {
 	    padding: 24px 0 47px;
 	}
-	a.title:after {
-	    bottom: 16px;
-	    height: 2px;
-	}
 	.news__wrap {
 	    flex-wrap: wrap;
         padding-bottom: 5px;
@@ -843,10 +935,75 @@
 			}
 		}
 	}
+	.subMenu+.cardsWrap {
+		padding: 25px 0 31px;
+		.card {
+			padding: 0 10px;
+		}
+	}
+	.cardsWrap-3 .card {
+		margin-bottom: 20px;
+	}
+	.card__name {
+		line-height: 1.3;
+	}
+	.vacancies .card__imgWrap-photo+.card__info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.vacancies p:last-child {
+		text-align: center;
+	}
+	.vacancies h2:last-child {
+		margin-top: 28px;
+	}
+	.trener.heroBanner {
+		background-size: 437%;
+    	background-position: 52% 42%;
+	}
+	.form {
+		padding: 28px 11px 42px;
+		.checkbox {
+			margin-top: 26px;
+		}
+		.checkbox label {
+			font-size: 15px;
+		}
+	}
+	.heroBanner.active .heroBanner__subtitle br, .heroBanner.active h1 br {
+		display: none;
+	}
+	.form form .checkbox label {
+		padding-left: 28px;
+		text-decoration: underline;
+		&:after {
+			display: none;
+		}
+	}
+	.form h2 {
+		padding: 0 32px;
+		margin-bottom: 33px;
+	}
+	input[type=file] {
+		width: 50px;
+		height: 50px!important;
+	}
+	input[type=file]+.upload {
+		width: 50px;
+		height: 50px;	
+	}
+	.form form p {
+		line-height: 1.4;
+	}
+	.form form .btn {
+		height: 60px;
+	}
 }
 
 // for 360
-@media (max-width: 413px) {
+@media (max-width: 413px) {	
 	.centerText p {
 		padding: 0;
 	}
@@ -869,7 +1026,7 @@
 		display: none;
 	}
 	.programs {
-		margin-bottom: 15px;
+		margin-bottom: 32px;
 	}
 	.banner {
 		background-size: cover;
@@ -881,5 +1038,8 @@
 
 // for 320
 @media (max-width: 359px) {
-	
+	.swiperNumber__img.mask1 {
+		top: 0;
+		left: 0;
+	}
 }
