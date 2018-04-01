@@ -95,16 +95,10 @@ $(document).ready(function(){
   if($('*').hasClass('swiperCards')) {
     var swiperCards = new Swiper('.swiperCards', {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 0,
       pagination: {
         el: '.swiper-pagination-programs',
         clickable: true
-      },
-      breakpoints: {
-        767: {
-          slidesPerView: 1,
-          spaceBetween: 30
-        }
       }
     });
   }

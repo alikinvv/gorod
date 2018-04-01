@@ -22,6 +22,13 @@
 
 // for 768
 @media (max-width: 1023px) {
+	.hamburger {
+		margin: 7px 14px;
+		&.active {
+			margin: -4px 14px;
+			width: 26px;
+		}
+	}
 	.video {
 		height: 341px;
 		&__other {
@@ -74,7 +81,7 @@
 		}
 	}
 	.header {
-	    padding: 28px 24px 14px;
+		padding: 31px 24px 14px;
 		.socialBlock {
 			display: none;
 		}
@@ -94,6 +101,12 @@
 		}
 		&__search {
 			display: none;
+		}
+		&__menu.mobile li {
+			margin: 18px 0;
+			a {
+				font-size: 24px;
+			}
 		}
 	}
 	.mbanner {
@@ -170,6 +183,9 @@
 			}
 		}		
 	}
+	.features .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: 79px;
+	}
 	.mbannerItem {
 		&__date, &__title {
 		    opacity: 1;
@@ -187,11 +203,11 @@
 	.h2, h2 {font-size: 25px;}
 	.h1, h1 {font-size: 45px;}
 	.centerText {
-        padding: 40px 0 22px;
+        padding: 40px 0 12px;
         p {font-size: 16px;}
         &__title {
         	margin-bottom: 34px;
-        	&.mT80 {margin-top: 54px;}
+        	&.mT80 {margin-top: 47px;}
         }
 	}
 	.m720 {display: none;}
@@ -290,6 +306,9 @@
 		&__photo {margin: 32px auto 14px;}
 		.swiper-pagination {bottom: -18px;}
 	}
+	.cardsWrap-3 .card {
+		margin-bottom: 29px;
+	}
 	.clients {
 	    padding: 40px 0 15px;
 	    .col-xs-12 {padding: 0;}
@@ -329,14 +348,18 @@
 		.card__date {font-size: 9px;}
 		.card__info {padding: 18px 10px 14px 10px;}
 	}
+	.closeForm {
+		right: 25px;
+		top: -48px;
+	}
 	.footer {
-        padding: 40px 0 10px;
+        padding: 38px 25px 11px;
 	    position: relative;
 	    &__logoWrap {width: 143px;}
 	    .socialBlock {
 		    position: absolute;
-		    right: 0;
-		    top: 33px;
+			right: 18px;
+			top: 31px;
 		    img {width: 24px;}
 		}
 		&__links, &__subscribe {display: none;}
@@ -358,8 +381,8 @@
 			}
 			span {
 				position: absolute;
-				right: 15px;
-			    bottom: 27px;
+				right: 13px;
+				bottom: 30px;
 				font-size: 10px;
 			}
 		}
@@ -383,12 +406,17 @@
     	    margin-bottom: 46px;
 	    }
 	}
+	.card__imgWrap-photo+.card__info {
+		padding: 29px 10px 10px 10px;
+		min-height: 112px;
+	}
 	.card {
+		&__name {line-height: 1.1;}
 		&__info {
 		    min-height: 120px;
 		    padding: 17px 10px 0 10px;
 		}
-		&__imgWrap {height: 160px;}
+		&__imgWrap {height: 120px;}
 		&__date {
 		    font-size: 13.4px;
 	        margin-bottom: 8px;

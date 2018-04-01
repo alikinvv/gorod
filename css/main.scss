@@ -280,7 +280,8 @@ input.form-control {
         @include make-xs-column(12);
         @include make-sm-column(6);
         @include make-md-column(3.7);
-        @include make-lg-column(3.6);       
+        @include make-lg-column(3.6);
+        z-index: 999;
         a {
             display: inline-block;
             width: 110px;
@@ -324,7 +325,9 @@ input.form-control {
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             flex-wrap: wrap;
             background: #363536;
             padding: 55px 0;  
@@ -648,7 +651,7 @@ input.form-control {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;        
+        height: 103%;        
         opacity: 0;
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -671,7 +674,6 @@ input.form-control {
         margin-bottom: 22px;
     }
     &__text {font-size: 24px;}
-
 }
 
 .doing {
@@ -1364,7 +1366,7 @@ input.form-control {
         border-radius: 20px;
         transition: .3s cubic-bezier(.8, .5, .2, 1.4);
         width:100%;
-        height: 3px;
+        height: 2px;
         transition-duration: 500ms;
         &:nth-child(1) {
             top:0px; 
