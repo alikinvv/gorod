@@ -81,10 +81,10 @@
 			font-size: 12px;
 		}
 		li.prev {
-			right: 15px;
+			right: -8px;
 		}
 		li.next {
-			left: 15px;
+			left: -8px;
 		}
 	}
 	.header {
@@ -340,7 +340,10 @@
 		}
 	}
 	.subMenu+.cardsWrap {
-	    padding: 25px 0 31px;
+	    padding: 25px 20px 31px;
+	}
+	.subMenu+.cardsWrap-pd {
+	    padding: 25px 20px 31px;
 	}
 	.card-news {
 		margin-bottom: 18px!important;
@@ -421,6 +424,9 @@
 		min-height: 112px;
 		height: calc(100% - 120px);
 	}
+	.events .card__info {
+		min-height: 144px;
+	}
 	.card {
 		&__name {line-height: 1.1;}
 		&__info {
@@ -436,6 +442,9 @@
 			font-size: 16.08px;
 			span {font-size: 14.74px;}
 		}
+	}
+	.mapWrap .mapInfo {
+		left: 40px;
 	}
 
 }
