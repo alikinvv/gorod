@@ -936,8 +936,8 @@ input.form-control {
     .card {margin-bottom: 30px;}
     &-3 .card {
         @include make-xs-column(12);
-        @include make-sm-column(4);
-        @include make-md-column(4);
+        @include make-sm-column(3.99);
+        @include make-md-column(3.99);
         @include make-lg-column(3.99); 
         margin-bottom: 50px;
         padding: 0 20px;
@@ -945,7 +945,7 @@ input.form-control {
     &-4 .card {
         @include make-xs-column(12);
         @include make-sm-column(4);
-        @include make-md-column(3);
+        @include make-md-column(2.99);
         @include make-lg-column(2.99); 
         margin-bottom: 30px;
     }
