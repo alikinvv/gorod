@@ -632,6 +632,7 @@ input.form-control {
         height: 600px;
         position: relative;
         left: 0;
+        transform: translate(0,0);
         svg {position: absolute;}
         #mask1 path {transform: scale(0.83) translate(11%, 0)}
         #mask2 path {transform: scale(0.26) translate(23%, 84%)}

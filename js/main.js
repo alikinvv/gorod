@@ -99,6 +99,12 @@ $(document).ready(function(){
       pagination: {
         el: '.swiper-pagination-programs',
         clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        }
       }
     });
   }

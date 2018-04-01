@@ -451,8 +451,22 @@
 
 // for 414
 @media (max-width: 767px) {
+	.header__menu.mobile li a {
+		font-size: 18px;
+	}
+	.header {
+		padding: 23px 0 14px;
+		.header__logo a {
+			width: 100px;
+		}
+	}
 	.video {
 		height: 220px;
+	}
+	.hamburger {
+		width: 26px;
+		height: 19px;
+		margin: 7px 10px;
 	}
 	.mapWrap {
 		height: initial;
@@ -555,7 +569,8 @@
 			}
 			.mbannerItem__date {
 				font-size: 15px;
-			    margin-bottom: 9px;
+				margin-bottom: 9px;
+				font-weight: 700;
 			}
 		}
 		&__top {
@@ -582,6 +597,9 @@
 				}
 			}
 		}		
+	}
+	.features .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: -6px;
 	}
 	.centerText {
 	    padding: 25px 0 22px;
