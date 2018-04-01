@@ -938,7 +938,7 @@ input.form-control {
         @include make-xs-column(12);
         @include make-sm-column(4);
         @include make-md-column(4);
-        @include make-lg-column(4); 
+        @include make-lg-column(3.99); 
         margin-bottom: 50px;
         padding: 0 20px;
     }
