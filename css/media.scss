@@ -246,6 +246,38 @@
 	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
 		bottom: 55px;
 	}
+	.content .doingItem {
+		margin-bottom: 19px;
+	}
+	.content .doing__wrap+h2 {
+		margin-top: 20px;
+	}
+	.logos h2 {
+		margin-top: 39px!important;
+		margin-bottom: -2px!important;
+	}
+	.logos img {
+		height: 35px;
+		margin: 53px 10px 9px!important;
+	}
+	.checkbox label {
+		font-size: 12px;
+	}
+	.form form .checkbox label:after {
+		width: 89%;
+	}
+	.form {
+		padding: 38px 0 55px;
+		form {
+			max-width: 354px;
+		}
+		h2 {
+			margin-bottom: 38px;
+		}
+	}
+	.form__subtitle {
+		margin-bottom: 40px;
+	}
 	.doingItem {
 		margin-bottom: 51px;
 		&__title {
@@ -253,8 +285,8 @@
 		    margin-bottom: 14px;
 		}
 		&__text {
-			font-size: 14px;
-		    line-height: 25px;
+			font-size: 14px!important;
+		    line-height: 25px!important;
 		}
 		&__icon {
 			max-height: 56px;
@@ -413,7 +445,7 @@
 	.cardsWrap {
 		padding: 56px 0 10px;
 		&-pd {
-			padding: 56px 20px 10px;
+			padding: 56px 20px 30px;
 		}
 	    h2 {
     	    margin-bottom: 46px;
@@ -446,7 +478,9 @@
 	.mapWrap .mapInfo {
 		left: 40px;
 	}
-
+	.content .doingItem img {
+		margin-bottom: 32px;
+	}
 }
 
 // for 414
@@ -833,7 +867,7 @@
 		&__info {padding: 19px 10px 7px 10px;}
 	}
 	.cardsWrap {
-	    padding: 29px 0 0px;
+		padding: 40px 0 30px;
 	    h2 {
 		    margin-bottom: 30px;
 		}
@@ -1003,6 +1037,7 @@
 	.form form .btn {
 		height: 60px;
 	}
+	
 }
 
 // for 360

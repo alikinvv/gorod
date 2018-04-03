@@ -114,8 +114,10 @@ input.form-control {
 .bgBlue {background: #252b33;}
 
 // helpers
+.mT0 {margin-top: 0!important}
 .mT16 {margin-top: 16px!important}
 .mT80 {margin-top: 80px}
+.mB0 {margin-bottom: 0!important}
 
 .redHover {
     position: relative;
@@ -898,6 +900,24 @@ input.form-control {
     }
 }
 
+.logos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    h2 {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 52px!important;
+        margin-bottom: 14px!important;
+    }
+    img {
+        margin: 53px 10px 18px!important;
+        pointer-events: none;
+    }
+}
+
 .clients {
     padding: 69px 0 19px;
     h2 {margin-bottom: 56px;}
@@ -1439,6 +1459,21 @@ section + section.content-text {padding-top: 44px;}
 .content {
     padding: 5px 0;
     &-text {padding-bottom: 73px;}
+    .doingItem {
+        margin-bottom: 0;
+        img {
+            margin-bottom: 57px;
+        }
+    }
+    .doing__wrap + h2 {
+        margin-top: 46px;
+    }
+    & + .cardsWrap  {
+        padding-top: 0;
+        margin-top: -18px;
+        padding-bottom: 0;
+        margin-bottom: -49px;
+    }
     .col-xs-12 {
         max-width: 895px;
         margin: 0 auto;
@@ -1512,10 +1547,15 @@ section + section.content-text {padding-top: 44px;}
        width: 47px; 
        display: inline-block;
        margin: 0 7px;
+       &:hover, &:focus {
+           img {transform: scale(1.1);}
+       }
        img {
             width: 100%;
             margin: 0;
             pointer-events: none;
+            transform: scale(1);
+            transition: all ease-in-out 0.4s;
        }
     }
 }
@@ -1561,6 +1601,14 @@ input[type="file"] {
 .form {
     padding: 65px 0;
     h2 {margin-bottom: 65px;}
+    &__subtitle {
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 100;
+        margin-bottom: 63px;
+    }
     .form-group {
         margin-bottom: 31px;
         position: relative;
