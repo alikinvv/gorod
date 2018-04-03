@@ -815,6 +815,9 @@
 		}		
 	    .swiper-pagination {bottom: -26px;}
 	}
+	.card:focus .card__img, .card:hover .card__img {
+		transform: scale(1);
+	}
 	.card {
 		&__imgWrap {
 			height: 200px;
