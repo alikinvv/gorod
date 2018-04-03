@@ -773,6 +773,8 @@ input.form-control {
         background-position: 50% 50%;
         background-repeat: no-repeat;        
         transition: all ease-in-out 2s;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
     &__date {
         font-size: 20px;
