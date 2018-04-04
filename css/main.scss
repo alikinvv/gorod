@@ -716,6 +716,11 @@ input.form-control {
         font-size: 20px;
         font-weight: 100;
         line-height: 31px;
+        strong {
+            font-size: 23.44px;
+            font-weight: 900;
+            display: block;
+        }
     }
 }
 
@@ -1106,11 +1111,20 @@ input.form-control {
     align-items: center;
     text-align: center;
     position: relative;
+    &-program {
+        h1 {font-size: 50px;}
+        .heroBanner__subtitle {
+            margin-bottom: -10px;
+        }
+    }
     h1 {
         margin-bottom: 31px;
         opacity: 0;
         transform: translateY(-50px);
         transition: all ease-out .6s;
+    }
+    .btn {
+        margin-top: 30px;
     }
     &__subtitle {
         font-weight: 100;
@@ -1120,6 +1134,11 @@ input.form-control {
         transform: translateY(-50px);
         transition: all ease-out .6s;
         transition-delay: 250ms;
+    }
+    &__date {
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
     }
     &.active {
         h1, .heroBanner__subtitle {
@@ -1716,6 +1735,71 @@ input[type="file"] {
             width: 40px;
             height: 40px;
         }
+    }
+}
+
+.program {
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: 84px;
+    .program__date {
+        position: absolute;
+        top: -2px;
+        left: -84px;
+        font-size: 23.44px;
+        font-weight: 700;
+    }
+    .program__title {
+        font-size: 23.44px;
+        font-weight: 900;
+        margin-bottom: 21px;
+    }
+    .program__text {
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 2.05;
+    }
+}
+
+.trener-banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 620px;
+    position: relative;
+    .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-12%, -50%);
+        max-width: 25%;
+    }
+    .name {
+        font-size: 37px;
+        font-weight: 900;
+        position: relative;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 54px;
+        display: inline-block;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+        }
+    }
+    .text {
+        color: #fff;
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 1.5;
     }
 }
 

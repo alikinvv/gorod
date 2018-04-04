@@ -37,6 +37,12 @@ function sameHeight(block) {
 
 $(document).ready(function(){
 
+  // scroll to section 
+  $('a[data-target]').click(function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: $('section#' + $(this).attr('data-target') +'').offset().top -200 }, 1000);
+  });
+
   
   // upload form check file
   if($('*').hasClass('video')) {
