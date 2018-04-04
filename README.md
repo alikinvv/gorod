@@ -12,3 +12,5 @@ Live Demo:
  - https://alikinvv.github.io/gorod/treners.html
  - https://alikinvv.github.io/gorod/vacancies.html
  - https://alikinvv.github.io/gorod/vacancy.html
+ - https://alikinvv.github.io/gorod/404.html
+ - https://alikinvv.github.io/gorod/korp.html
