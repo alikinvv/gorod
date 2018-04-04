@@ -1037,6 +1037,14 @@
 	.form form .btn {
 		height: 60px;
 	}
+	.heroBanner-404 {
+		.heroBanner__subtitle {
+			padding: 0 38px;
+			br {
+				display: block!important;
+			}
+		}
+	}
 	
 }
 
