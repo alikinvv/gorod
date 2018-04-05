@@ -481,6 +481,26 @@
 	.content .doingItem img {
 		margin-bottom: 32px;
 	}
+	.logos h2 {
+		margin-bottom: 37px!important;
+	}
+	.logos .swiper-slide {
+		text-align: center;
+	}
+	.logosMobile {
+		padding-bottom: 30px;
+		.swiper-pagination-logos {
+			bottom: -32px!important;
+		}
+	}
+	.logos img {
+		margin: 0 !important;
+		width: 46%;
+		height: initial;
+	}
+	.logos .swiper-wrapper {
+		flex-wrap: nowrap;
+	}
 }
 
 // for 414
@@ -825,6 +845,9 @@
 			justify-content: normal;
 		}
 	}
+	.content .doingItem {
+		margin-bottom: 0;
+	}
 	.doingItem {
 		margin-bottom: 0;
 		&__icon {
@@ -832,11 +855,11 @@
 	        margin: 0 auto 29px;
 		}
 		&__title {
-			font-size: 20px;
+			font-size: 20px!important;
 			margin-bottom: 17px;
 		}
 		&__text {
-			font-size: 20px;
+			font-size: 20px!important;
 			font-weight: 100;
 			line-height: 32px;
 		}
@@ -854,7 +877,7 @@
 	}
 	.card {
 		&__imgWrap {
-			height: 200px;
+			height: 160px;
 		}
 		&__date {
 			font-size: 18px;

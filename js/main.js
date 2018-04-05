@@ -1,5 +1,6 @@
 var timerId;
 var swiperDoing = undefined;
+var swiperLogos = undefined;
 
 // init on mobile & destroy on desktop
 function initSwiper() {
@@ -19,6 +20,28 @@ function initSwiper() {
         jQuery('.swiper-wrapper').removeAttr('style');
         jQuery('.swiper-slide').removeAttr('style');            
     }        
+}   
+
+function logosSwiper() {
+  var screenWidth = $(window).width();        
+  if(screenWidth < 767 && swiperLogos == undefined) {            
+      $('.logosMobile').each(function(){
+        swiperLogos = new Swiper(this, {  
+            slidesPerView: 2,
+            spaceBetween: 0,
+            slidesPerGroup: 2,
+            pagination: {
+              el: '.swiper-pagination-logos',
+              clickable: true
+            },
+          })
+      });        
+  } else if (screenWidth > 768 && swiperLogos != undefined) {            
+    swiperLogos.destroy();
+      swiperLogos = undefined;
+      jQuery('.logosMobile .swiper-wrapper').removeAttr('style');
+      jQuery('.logosMobile .swiper-slide').remove('style');            
+  }        
 }   
 
 // set one height for all blocks
@@ -83,6 +106,7 @@ $(document).ready(function(){
   }
 
   initSwiper(); 
+  logosSwiper(); 
 
   $('.header__search').click(function() {
     $('.header').toggleClass('search');
