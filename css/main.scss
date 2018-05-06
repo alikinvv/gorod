@@ -749,6 +749,10 @@ input.form-control {
     -ms-border-radius:5px !important;
     -o-border-radius:5px !important;
     border-radius:5px !important;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     &:hover, &:focus {
         color: $mainText;
         text-decoration: none;
@@ -759,6 +763,10 @@ input.form-control {
            -ms-border-radius:5px !important;
            -o-border-radius:5px !important;
            border-radius:5px !important;
+           -webkit-backface-visibility: hidden;
+           -moz-backface-visibility: hidden;
+           -webkit-transform: translate3d(0, 0, 0);
+           -moz-transform: translate3d(0, 0, 0);
         }
     }
     &__info {
@@ -779,6 +787,10 @@ input.form-control {
         -ms-border-radius:5px !important;
         -o-border-radius:5px !important;
         border-radius:5px !important;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
         &-photo {
             height: 170px;
             & + .card__info {
