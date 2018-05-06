@@ -14,9 +14,6 @@
 
 // for 1024
 @media (max-width: 1279px) {
-	.mbanner__left .mbannerItem__info {
-		display: none;
-	}
 	.mbanner {
 	    height: 500px;
 	    overflow: hidden;
@@ -25,6 +22,16 @@
 
 // for 768
 @media (max-width: 1023px) {
+	.vacancies .card__name {
+		line-height: 1.2;
+		font-size: 18px;
+		margin: 0;
+	}
+	.vacancies .card__info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	section+section.content-text {
 		padding-bottom: 43px;
 	}
@@ -353,7 +360,10 @@
 	}
 	.clients {
 	    padding: 40px 0 15px;
-	    .col-xs-12 {padding: 0;}
+	    .col-xs-12 {
+			padding: 0 20px;
+			overflow: hidden;
+		}
 	    h2 {margin-bottom: 26px;}
 	}
 	.news {
@@ -455,7 +465,7 @@
 	    }
 	}
 	.card__imgWrap-photo+.card__info {
-		padding: 18px 10px 10px 10px;
+		padding: 18px 7px 10px 7px;
 		min-height: 112px;
 		height: calc(100% - 120px);
 	}
@@ -508,6 +518,12 @@
 
 // for 414
 @media (max-width: 767px) {
+	.mbanner__left .mbannerItem__info {
+		bottom: 0;
+	}
+	.hamburger span:nth-child(2) {
+		top: 9px;
+	}
 	.checkbox {
 		margin-top: 14px;
 		input {
@@ -594,7 +610,7 @@
 	}
 	.hamburger {
 		width: 26px;
-		height: 19px;
+		height: 20px;
 		margin: 7px 10px;
 	}
 	.mapWrap {
@@ -629,10 +645,10 @@
 				font-size: 11px;
 			}
 			&.arrow-left {
-				right: 41px;
+				right: 3px;
 			}
 			&.arrow-right {
-				left: -41px;
+				left: -15px;
 			}
 		}
 		&-trener {
@@ -640,6 +656,9 @@
 				display: none;
 				&.arrow-left, &.arrow-right, &.next, &.prev, &.active {				
 					display: block;
+				}
+				&.arrow-left {
+					right: -16px;
 				}
 			}
 		}
@@ -681,6 +700,9 @@
 			margin-bottom: 10px;
 		}
 	}
+	.mbanner__bottom-left .mbannerItem__title {
+		margin: 0;
+	}
 	.mbanner {
 		&__left {
 			height: 100vh;
@@ -689,7 +711,8 @@
 		    .mbannerItem__title {
 		    	font-size: 30px;
 			    line-height: 41px;
-		        padding: 0 80px;
+				padding: 0 80px;
+				margin: 0;
 		    	span {font-size: 15px;}
 		    }
 		    .mbannerItem__date {
@@ -712,6 +735,7 @@
 				.mbannerItem__title {
 					font-size: 24px;
 					margin-bottom: 9px;
+					margin: 0;
 				}
 			}
 			.mbannerItem__date {
@@ -744,6 +768,9 @@
 				}
 			}
 		}		
+	}
+	.swiperReviews__text br {
+		display: none;
 	}
 	.features .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
 		bottom: -6px;
@@ -1001,7 +1028,7 @@
 	.subMenu+.cardsWrap {
 		padding: 25px 0 31px;
 		.card {
-			padding: 0 10px;
+			padding: 0 15px;
 		}
 	}
 	.cardsWrap-3 .card {
