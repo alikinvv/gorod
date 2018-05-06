@@ -744,15 +744,21 @@ input.form-control {
     color: $mainText;
     text-align: center;
     overflow: hidden;
-    border-top-left-radius: 5px !important;
-    border-top-right-radius: 5px !important;
+    -webkit-border-radius:5px !important;
+    -moz-border-radius:5px !important;
+    -ms-border-radius:5px !important;
+    -o-border-radius:5px !important;
+    border-radius:5px !important;
     &:hover, &:focus {
         color: $mainText;
         text-decoration: none;
         .card__img {transform: scale(1.2)}
         .card__imgWrap {
-            border-top-left-radius: 5px !important;
-            border-top-right-radius: 5px !important;
+           -webkit-border-radius:5px!important;
+           -moz-border-radius:5px !important;
+           -ms-border-radius:5px !important;
+           -o-border-radius:5px !important;
+           border-radius:5px !important;
         }
     }
     &__info {
@@ -768,8 +774,11 @@ input.form-control {
     &__imgWrap {
         height: 230px;
         overflow: hidden;
-        border-top-left-radius: 5px!important;
-        border-top-right-radius: 5px!important;
+        -webkit-border-radius:5px !important;
+        -moz-border-radius:5px !important;
+        -ms-border-radius:5px !important;
+        -o-border-radius:5px !important;
+        border-radius:5px !important;
         &-photo {
             height: 170px;
             & + .card__info {
