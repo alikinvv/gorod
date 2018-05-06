@@ -750,6 +750,10 @@ input.form-control {
         color: $mainText;
         text-decoration: none;
         .card__img {transform: scale(1.2)}
+        .card__imgWrap {
+            border-top-left-radius: 5px !important;
+            border-top-right-radius: 5px !important;
+        }
     }
     &__info {
         border-left: 1px solid #eeeeee;
@@ -781,8 +785,6 @@ input.form-control {
         background-position: 50% 50%;
         background-repeat: no-repeat;        
         transition: all ease-in-out 2s;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
     }
     &__date {
         font-size: 20px;
